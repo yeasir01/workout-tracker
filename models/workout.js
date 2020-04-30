@@ -9,31 +9,27 @@ const workoutSchema = new Schema({
   exercises: [{
     type: {
       type: String,
-      trim: true
+      trim: true,
+      required: 'exercise field cannot be blank.'
     },
     name: {
       type: String,
-      trim: true
+      required: 'enter a name for exercise.'
     },
     duration: {
-      type: Number,
-      default: 0
+      type: Number
     },
     weight: {
-      type: Number,
-      default: 0
+      type: Number
     },
     reps: {
-      type: Number,
-      default: 0
+      type: Number
     },
     sets: {
-      type: Number,
-      default: 0
+      type: Number
     },
     distance: {
-      type: Number,
-      default: 0
+      type: Number
     }
   }]
 });
